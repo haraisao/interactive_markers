@@ -38,6 +38,10 @@
 #include <set>
 #include <sstream>
 
+#ifndef M_PI
+#define M_PI 3.14159265358979
+#endif
+
 namespace interactive_markers
 {
 

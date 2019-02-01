@@ -48,6 +48,7 @@
 #include <visualization_msgs/InteractiveMarkerUpdate.h>
 
 #include "detail/state_machine.h"
+#include "exportdecl.h"
 
 namespace interactive_markers
 {
@@ -64,9 +65,13 @@ class SingleClient;
 /// All timestamped messages are being transformed into the target frame,
 /// while for non-timestamped messages it is ensured that the necessary
 /// tf transformation will be available.
-class InteractiveMarkerClient : boost::noncopyable
+class INTERACTIVE_MARKERS_DECL InteractiveMarkerClient : boost::noncopyable
 {
 public:
+
+#ifdef WIN32
+#undef ERROR
+#endif
 
   enum StatusT {
     OK = 0,

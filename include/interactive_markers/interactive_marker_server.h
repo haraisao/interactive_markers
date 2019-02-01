@@ -42,6 +42,7 @@
 #include <ros/ros.h>
 #include <ros/callback_queue.h>
 
+#include "exportdecl.h"
 
 #include <boost/function.hpp>
 #include <boost/unordered_map.hpp>
@@ -53,7 +54,7 @@ namespace interactive_markers
 ///
 /// Note: Keep in mind that changes made by calling insert(), erase(), setCallback() etc.
 ///       are not applied until calling applyChanges().
-class InteractiveMarkerServer : boost::noncopyable
+class INTERACTIVE_MARKERS_DECL InteractiveMarkerServer : boost::noncopyable
 {
 public:
 
